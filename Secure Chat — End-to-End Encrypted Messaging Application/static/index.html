@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Secure Chat E2E</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🔐 Secure Chat</h1>
+
+    <p class="subtitle">
+        End-to-End Encrypted Messaging
+    </p>
+
+    <section id="auth">
+
+        <input
+            id="username"
+            placeholder="Username"
+        >
+
+        <input
+            id="password"
+            type="password"
+            placeholder="Password"
+        >
+
+        <button onclick="register()">
+            Register
+        </button>
+
+        <button onclick="login()">
+            Login
+        </button>
+
+    </section>
+
+
+    <section id="chat" class="hidden">
+
+        <p>
+            Logged in as:
+            <strong id="currentUser"></strong>
+        </p>
+
+        <input
+            id="receiver"
+            placeholder="Receiver username"
+        >
+
+        <textarea
+            id="message"
+            placeholder="Write encrypted message..."
+        ></textarea>
+
+        <button onclick="sendMessage()">
+            🔒 Send Encrypted Message
+        </button>
+
+        <h3>Messages</h3>
+
+        <div id="messages"></div>
+
+    </section>
+
+</div>
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>
